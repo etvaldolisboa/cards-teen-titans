@@ -1,0 +1,139 @@
+@font-face {
+	font-family: '8bits-titulos';
+	src: url(../fonts/8bitOperatorPlus-Bold.ttf);
+}
+
+@font-face {
+	font-family: '8bits textos';
+	src: url(../fonts/8bitOperatorPlus-Regular.ttf);
+}
+
+:root {
+	--wh: #b5a499;
+	--verd: #3d746f;
+	--larnj: #bb955f;
+	--roxo: #617181;
+	--preto: #352a28;
+}
+
+body {
+	font-family: '8bits textos', monospace;
+	max-width: 1500px;
+	margin: 0 auto;
+	background-image: url(../imagens/bg-animado.gif);
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: rgb(255, 255, 255);
+	background-color: var(--preto);
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	padding-top: 20px;
+}
+
+header .logo {
+	width: 60px;
+	transition: 0.2s ease;
+}
+
+header .logo:hover,
+main .cartao-personagem:hover {
+	transform: scale(1.05);
+	cursor: pointer;
+}
+
+main {
+	padding: 25px;
+}
+
+main .listagem-personagens {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	justify-content: center;
+}
+
+main .cartao-personagem {
+	width: 260px;
+	height: 375px;
+	padding: 18px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 15px;
+	transition: 0.15s ease-in-out;
+	background-image: url(../imagens/bg-card.png);
+	background-size: contain;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+
+main .cartao-personagem:hover {
+	filter: brightness(1.2);
+}
+
+main .cartao-personagem .informacoes {
+	position: relative;
+	width: 200px;
+	text-align: start;
+}
+
+main .cartao-personagem .informacoes .numero {
+	font-size: 2rem;
+	color: #000;
+	font-weight: 900;
+	color: var(--verd);
+	text-shadow: -2px -2px 0px var(--preto), -2px 2px 0px var(--preto), 2px -2px 0px var(--preto), 2px 2px 0px var(--preto);
+}
+
+main .cartao-personagem .informacoes .nome-personagem {
+	font-family: '8bits-titulos';
+	letter-spacing: 1.5px;
+	font-size: 1.3rem;
+	color: var(--wh);
+	left: 30px;
+	position: absolute;
+}
+
+main .cartao-personagem .gif {
+	width: 180px;
+}
+
+main .cartao-personagem .qtd-vida {
+	display: flex;
+}
+
+main .cartao-personagem .qtd-vida .vida {
+	width: 30px;
+	background-color: none;
+}
+
+main .cartao-personagem .atributos {
+	width: 85%;
+	align-items: start;
+}
+
+main .cartao-personagem .tipo {
+	text-transform: uppercase;
+	border-radius: 6px;
+	border: 3px solid var(--preto);
+	text-align: start;
+	padding-left: 5px;
+	color: var(--preto);
+	font-weight: 600;
+	font-size: 13px;
+}
+
+.def {
+	background-color: var(--verd);
+}
+
+.atk {
+	background-color: var(--larnj);
+}
+
+.estrategia {
+	background-color: var(--roxo);
+}
