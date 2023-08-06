@@ -103,6 +103,7 @@ main .cartao-personagem .gif {
 
 main .cartao-personagem .qtd-vida {
 	display: flex;
+	margin: -10px 0 5px;
 }
 
 main .cartao-personagem .qtd-vida .vida {
@@ -113,12 +114,19 @@ main .cartao-personagem .qtd-vida .vida {
 main .cartao-personagem .atributos {
 	width: 85%;
 	align-items: start;
+	gap: 8px;
+	display: flex;
+	flex-direction: column;
 }
 
 main .cartao-personagem .tipo {
 	text-transform: uppercase;
-	border-radius: 6px;
-	border: 3px solid var(--preto);
+	box-shadow:
+		3px 0px #b7a399,
+		-3px 0px #b7a399,
+		0 3px #b7a399,
+		0 -3px #b7a399;
+	border: 1px solid var(--preto);
 	text-align: start;
 	padding-left: 5px;
 	color: var(--preto);
